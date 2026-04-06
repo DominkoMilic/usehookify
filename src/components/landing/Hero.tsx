@@ -57,14 +57,14 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
-            href="/generate"
+            href="/generate/"
             className="group inline-flex items-center gap-2 px-6 py-3 bg-brand-600 text-white rounded-xl font-semibold text-lg hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/25 hover:shadow-brand-600/40"
           >
             Start Generating
             <HiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
-            href="/pricing"
+            href="/pricing/"
             className="inline-flex items-center gap-2 px-6 py-3 border-2 border-dark-200 dark:border-dark-700 text-dark-700 dark:text-dark-200 rounded-xl font-semibold text-lg hover:border-brand-300 dark:hover:border-brand-500/60 hover:text-brand-600 dark:hover:text-brand-300 transition-all"
           >
             View Pricing

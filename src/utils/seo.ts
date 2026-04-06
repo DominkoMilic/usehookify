@@ -35,10 +35,10 @@ const PAGE_META: Record<PageMetaKey, Metadata> = {
       title: "Generate Hooks — UseHookify",
       description:
         "Create attention-grabbing hooks and titles for short-form videos.",
-      url: `${SITE_CONFIG.url}/generate`,
+      url: `${SITE_CONFIG.url}/generate/`,
       images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
     },
-    alternates: { canonical: `${SITE_CONFIG.url}/generate` },
+    alternates: { canonical: `${SITE_CONFIG.url}/generate/` },
   },
   pricing: {
     title: "Pricing — UseHookify",
@@ -47,21 +47,21 @@ const PAGE_META: Record<PageMetaKey, Metadata> = {
     openGraph: {
       title: "Pricing — UseHookify",
       description: "Start free or go Pro for unlimited AI hook generation.",
-      url: `${SITE_CONFIG.url}/pricing`,
+      url: `${SITE_CONFIG.url}/pricing/`,
       images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
     },
-    alternates: { canonical: `${SITE_CONFIG.url}/pricing` },
+    alternates: { canonical: `${SITE_CONFIG.url}/pricing/` },
   },
   privacy: {
     title: "Privacy Policy — UseHookify",
     description:
       "Read our privacy policy to understand how UseHookify handles your data.",
-    alternates: { canonical: `${SITE_CONFIG.url}/privacy` },
+    alternates: { canonical: `${SITE_CONFIG.url}/privacy/` },
   },
   impressum: {
     title: "Impressum — UseHookify",
     description: "Legal information and impressum for UseHookify.",
-    alternates: { canonical: `${SITE_CONFIG.url}/impressum` },
+    alternates: { canonical: `${SITE_CONFIG.url}/impressum/` },
   },
 };
 

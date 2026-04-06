@@ -41,7 +41,7 @@ Required environment variables:
 ### 4. Set up LemonSqueezy
 
 1. Create a store on LemonSqueezy
-2. Create a subscription product ($8.99/month)
+2. Create a subscription product ($4.99/month)
 3. Set up a webhook pointing to `https://usehookify.com/api/webhooks/lemonsqueezy`
 4. Copy the webhook secret, store ID, and variant ID to your env
 

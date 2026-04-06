@@ -23,7 +23,7 @@ export default function UpgradeCTA() {
           </p>
         </div>
         <Link
-          href="/pricing"
+          href="/pricing/"
           className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 text-white rounded-xl font-semibold text-sm hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/25 shrink-0"
         >
           <HiArrowUp className="w-4 h-4" />

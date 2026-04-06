@@ -25,7 +25,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "$8.99",
+    price: "$4.99",
     period: "/month",
     description: "For serious content creators",
     features: [
@@ -189,7 +189,7 @@ export default function PricingPageClient() {
                 </button>
               ) : (
                 <a
-                  href="/generate"
+                  href="/generate/"
                   className="group flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold bg-dark-100 dark:bg-dark-700 text-dark-700 dark:text-dark-200 hover:bg-dark-200 dark:hover:bg-dark-600 transition-all"
                 >
                   {plan.cta}

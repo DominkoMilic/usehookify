@@ -18,12 +18,12 @@ const plans = [
       "Copy to clipboard",
     ],
     cta: "Start Free",
-    href: "/generate",
+    href: "/generate/",
     popular: false,
   },
   {
     name: "Pro",
-    price: "$8.99",
+    price: "$4.99",
     period: "/month",
     description: "For creators who want the full power",
     features: [
@@ -36,7 +36,7 @@ const plans = [
       "Cancel anytime",
     ],
     cta: "Upgrade to Pro",
-    href: "/pricing",
+    href: "/pricing/",
     popular: true,
   },
 ];

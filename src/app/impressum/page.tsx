@@ -18,13 +18,13 @@ export default function ImpressumPage() {
             <p>
               UseHookify
               <br />
-              [Your Full Name / Company Name]
+              Dominko Milić
               <br />
-              [Street Address]
+              Požeška 8
               <br />
-              [Postal Code, City]
+              21000 Split
               <br />
-              [Country]
+              Croatia
             </p>
           </section>
 
@@ -39,7 +39,7 @@ export default function ImpressumPage() {
             </p>
           </section>
 
-          <section>
+          {/* <section>
             <h2 className="text-xl font-semibold text-dark-900 dark:text-dark-100 mt-8 mb-3">
               VAT ID
             </h2>
@@ -49,16 +49,16 @@ export default function ImpressumPage() {
               <br />
               [Your VAT ID if applicable]
             </p>
-          </section>
+          </section> */}
 
           <section>
             <h2 className="text-xl font-semibold text-dark-900 dark:text-dark-100 mt-8 mb-3">
               Responsible for content according to § 55 Abs. 2 RStV
             </h2>
             <p>
-              [Your Full Name]
+              Dominko Milić
               <br />
-              [Address]
+              Požeška 8
             </p>
           </section>
 

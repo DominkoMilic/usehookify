@@ -33,7 +33,7 @@ export default function CTASection() {
           transition={{ delay: 0.2 }}
         >
           <Link
-            href="/generate"
+            href="/generate/"
             className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-700 dark:bg-dark-100 dark:text-dark-900 rounded-xl font-bold text-lg hover:bg-brand-50 dark:hover:bg-white transition-all shadow-lg"
           >
             Start Generating — It&apos;s Free

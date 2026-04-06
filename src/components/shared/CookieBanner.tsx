@@ -23,7 +23,7 @@ export default function CookieBanner() {
                 traffic. By clicking &quot;Accept&quot;, you consent to
                 analytics cookies.{" "}
                 <a
-                  href="/privacy"
+                  href="/privacy/"
                   className="underline text-brand-300 hover:text-brand-200"
                 >
                   Learn more

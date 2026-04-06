@@ -41,7 +41,7 @@ export default function UsageBadge({ usage }: UsageBadgeProps) {
 
       {isLow && !usage.isPaid && (
         <Link
-          href="/pricing"
+          href="/pricing/"
           className="inline-flex items-center gap-1 text-accent-600 dark:text-accent-300 hover:text-accent-700 dark:hover:text-accent-200 font-semibold"
         >
           <HiArrowUp className="w-3.5 h-3.5" />

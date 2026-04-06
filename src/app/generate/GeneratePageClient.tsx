@@ -32,7 +32,7 @@ export default function GeneratePageClient() {
     const params = new URLSearchParams(window.location.search);
     if (params.get("upgraded") === "true") {
       toast.success("🎉 Welcome to Pro! Enjoy unlimited generations.");
-      router.replace("/generate");
+      router.replace("/generate/");
     }
   }, [router]);
 

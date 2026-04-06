@@ -24,7 +24,7 @@ export default function NotFound() {
             Go Home
           </Link>
           <Link
-            href="/generate"
+            href="/generate/"
             className="px-6 py-3 border-2 border-dark-200 dark:border-dark-700 text-dark-700 dark:text-dark-200 rounded-xl font-semibold hover:border-brand-300 dark:hover:border-brand-500/60 hover:text-brand-600 dark:hover:text-brand-300 transition-all"
           >
             Generate Hooks Instead

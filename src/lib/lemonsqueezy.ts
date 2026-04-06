@@ -29,7 +29,7 @@ export async function createCheckout(
             custom: { user_id: userId },
           },
           product_options: {
-            redirect_url: `${process.env.NEXT_PUBLIC_APP_URL}/generate?upgraded=true`,
+            redirect_url: `${process.env.NEXT_PUBLIC_APP_URL}/generate/?upgraded=true`,
           },
         },
         relationships: {

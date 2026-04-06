@@ -11,19 +11,19 @@ export const SITE_CONFIG = {
 /** Navigation links */
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/generate", label: "Generate" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/generate/", label: "Generate" },
+  { href: "/pricing/", label: "Pricing" },
 ] as const;
 
 /** Footer links */
 export const FOOTER_LINKS = {
   product: [
-    { href: "/generate", label: "Generator" },
-    { href: "/pricing", label: "Pricing" },
+    { href: "/generate/", label: "Generator" },
+    { href: "/pricing/", label: "Pricing" },
   ],
   legal: [
-    { href: "/privacy", label: "Privacy Policy" },
-    { href: "/impressum", label: "Impressum" },
+    { href: "/privacy/", label: "Privacy Policy" },
+    { href: "/impressum/", label: "Impressum" },
   ],
 } as const;
 
