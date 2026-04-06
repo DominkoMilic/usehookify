@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import { createClient } from "@/lib/supabase/client";
 import type { User } from "@supabase/supabase-js";
 
@@ -8,9 +8,14 @@ import type { User } from "@supabase/supabase-js";
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const supabase = createClient();
+  const supabase = useMemo(() => createClient(), []);
 
   useEffect(() => {
+    if (!supabase) {
+      setLoading(false);
+      return;
+    }
+
     // Get initial session
     const getUser = async () => {
       const {
@@ -31,11 +36,15 @@ export function useAuth() {
     });
 
     return () => subscription.unsubscribe();
-  }, [supabase.auth]);
+  }, [supabase]);
 
   /** Sign up with email & password */
   const signUp = useCallback(
     async (email: string, password: string) => {
+      if (!supabase) {
+        throw new Error("Authentication is not configured.");
+      }
+
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
@@ -43,12 +52,16 @@ export function useAuth() {
       if (error) throw error;
       return data;
     },
-    [supabase.auth],
+    [supabase],
   );
 
   /** Sign in with email & password */
   const signIn = useCallback(
     async (email: string, password: string) => {
+      if (!supabase) {
+        throw new Error("Authentication is not configured.");
+      }
+
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
@@ -56,7 +69,7 @@ export function useAuth() {
       if (error) throw error;
       return data;
     },
-    [supabase.auth],
+    [supabase],
   );
 
   /**
@@ -64,6 +77,10 @@ export function useAuth() {
    * Requires: Google provider enabled in Supabase Dashboard → Auth → Providers.
    */
   const signInWithGoogle = useCallback(async () => {
+    if (!supabase) {
+      throw new Error("Authentication is not configured.");
+    }
+
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
@@ -71,13 +88,18 @@ export function useAuth() {
       },
     });
     if (error) throw error;
-  }, [supabase.auth]);
+  }, [supabase]);
 
   const signOut = useCallback(async () => {
+    if (!supabase) {
+      setUser(null);
+      return;
+    }
+
     const { error } = await supabase.auth.signOut();
     if (error) throw error;
     setUser(null);
-  }, [supabase.auth]);
+  }, [supabase]);
 
   return { user, loading, signUp, signIn, signInWithGoogle, signOut };
 }
