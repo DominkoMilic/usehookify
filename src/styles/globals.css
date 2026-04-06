@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-white dark:bg-dark-900;
+  }
+
+  body {
+    @apply bg-white text-dark-900 dark:bg-dark-900 dark:text-dark-100 font-sans transition-colors duration-300;
+  }
+
+  /* Remove default focus styles, add custom */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 dark:ring-offset-dark-900;
+  }
+}
+
+@layer components {
+  /* Reusable container */
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Page wrapper with navbar offset */
+  .page-wrapper {
+    @apply min-h-screen pt-16;
+  }
+}
+
+@layer utilities {
+  /* Text gradient utility */
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600;
+  }
+}
